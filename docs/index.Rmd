@@ -1,0 +1,49 @@
+---
+author: "Hanna Lee"
+date: "2/22/2022"
+title: "index.Rmd"
+output: html_document
+---
+
+```{r, setup, include = FALSE}
+library("tidyverse")
+library("knitr")
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+knitr::opts_knit$set(root.dir = "../source")
+```
+
+```{r, sources, include = FALSE}
+source("~/Documents/INFO_201/a3-hlee107/source/analysis.R")
+source("~/Documents/INFO_201/a3-hlee107/source/a3-functions.R")
+```
+
+# Report {.tabset .tabset-fade .tabset-pills}
+
+### Introduction
+
+<br>
+
+### Summary of Information
+
+<br>
+
+## Chart that Shows Trends Over Time
+
+### <u>Speed and Education</u>
+
+<br>
+
+```{r, over_time, echo = FALSE, fig.show="hold", out.width="75%"}
+data <- population_data(filter_jail_pop)
+plot(bipoc_pop_scatter(data))
+```
+
+## Chart that Compares Two Variables
+
+### <u>Speed and Education</u>
+
+<br>
+
+```{r, compare, echo = FALSE, fig.show="hold", out.width="50%"}
+
+```
