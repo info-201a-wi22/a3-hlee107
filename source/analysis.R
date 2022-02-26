@@ -51,13 +51,85 @@ state_black_scatter <- function(data_2) {
     geom_point(aes(x = year, y = wa_black_jail_pop), color = "blue") +
     geom_point(aes(x = year, y = ms_black_jail_pop), color = "red") +
     
-    labs(title = "Comparison between Washington and Mississippi Black Jail Population",
+    labs(title = "Comparison between Washington and Mississippi Jail Population
+         of Black People",
          x = "Year",
-         y = "Population") +
-         #color = "State") +
+         y = "Population",
+         color = "State") +
     
-    theme(axis.text.x = element_text(angle = 90)) +
-    
-    scale_color_discrete(name = "State")
+    theme(axis.text.x = element_text(angle = 90))
 }
 
+# Map Function -----------------------------------------------------------------
+
+# WA jail population of Black people
+wa_black_map <- function(data_3) {
+  ggplot(data_3) +
+  geom_polygon(
+    mapping = aes(x = long, y = lat, group = group, fill = black_jail_pop),
+    color = "gray", size = 0.3
+  ) +
+  
+  coord_map() +
+  
+  scale_fill_continuous(limits = c(0, max(wa_map_data$black_jail_pop)),
+                        na.value = "white", low = "yellow", high = "red") +
+  
+  blank_theme +
+  
+  ggtitle("Washington State Jail Population of Black People")
+}
+
+# WA jail population of White people
+wa_white_map <- function(data_3) {
+  ggplot(data_3) +
+  geom_polygon(
+    mapping = aes(x = long, y = lat, group = group, fill = white_jail_pop),
+    color = "gray", size = 0.3
+  ) +
+  
+  coord_map() +
+  
+  scale_fill_continuous(limits = c(0, max(wa_map_data$white_jail_pop)),
+                        na.value = "white", low = "yellow", high = "red") +
+  
+  blank_theme +
+  
+  ggtitle("Washington State Jail Population of White People")
+}
+
+# MS jail population of Black people
+ms_black_map <- function(data_4) {
+  ggplot(data_4) +
+  geom_polygon(
+    mapping = aes(x = long, y = lat, group = group, fill = black_jail_pop),
+    color = "gray", size = 0.3
+  ) +
+  
+  coord_map() +
+  
+  scale_fill_continuous(limits = c(0, max(ms_map_data$black_jail_pop)),
+                        na.value = "white", low = "yellow", high = "red") +
+  
+  blank_theme +
+  
+  ggtitle("Mississippi State Jail Population of Black People")
+}
+
+# MS jail population of White people
+ms_white_map <- function(data_4) {
+  ggplot(ms_map_data) +
+  geom_polygon(
+    mapping = aes(x = long, y = lat, group = group, fill = white_jail_pop),
+    color = "gray", size = 0.3
+  ) +
+  
+  coord_map() +
+  
+  scale_fill_continuous(limits = c(0, max(ms_map_data$white_jail_pop)),
+                        na.value = "white", low = "yellow", high = "red") +
+  
+  blank_theme +
+  
+  ggtitle("Mississippi State Jail Population of White People")
+}

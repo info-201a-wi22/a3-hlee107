@@ -1,7 +1,7 @@
 ---
 author: "Hanna Lee"
 date: "2/22/2022"
-title: "index.Rmd"
+title: "Incarceration Data Visualization"
 output: html_document
 ---
 
@@ -33,17 +33,41 @@ source("~/Documents/INFO_201/a3-hlee107/source/a3-functions.R")
 
 <br>
 
-```{r, over_time, echo = FALSE, fig.show="hold", out.width="75%"}
+```{r, over_time, echo = FALSE, fig.show="hold", out.width="100%"}
 data <- population_data(filter_jail_pop)
-plot(bipoc_pop_scatter(data))
+plot(bipoc_pop_line(data))
 ```
+<br>
+<br>
+<div style="background-color:#F2EEED;padding:5px;">
+<p style="text-indent:40px;font-size:17px;">
+Both graphs show a slightly negatively sloped linear regression line, which would indicate that the higher the population proportion with at least two access points (relative to one), the less students meet test standards. This can loosely imply that more Internet access points does not result in better education. However, correlation does not imply causation, and so further tests would be required. Moreover, if you remove some points, the graph appears it could have a positively sloped regression line.
+</p></div>
+<!-------------------------------------------------------------------------------------------------->
 
 ## Chart that Compares Two Variables
 
-### <u>State and Black Jail Population</u>
+### <u>State and Jail Population of Black People</u>
 
 <br>
 
-```{r, compare, echo = FALSE, fig.show="hold", out.width="50%"}
-plot(state_black_scatter(ms_wa_black_pop))
+```{r, compare, echo = FALSE, fig.show="hold", out.width="100%"}
+data_2 <- ms_wa_black_pop
+plot(state_black_scatter(data_2))
+```
+
+
+## Map of Washington State and Mississippi
+
+### <u>State and Jail Population of Black and White People</u>
+
+<br>
+
+```{r, map, echo = FALSE, fig.show="hold", out.width="50%"}
+data_3 <- wa_map_data
+data_4 <- ms_map_data
+wa_black_map(data_3)
+wa_white_map(data_3)
+ms_black_map(data_4)
+ms_white_map(data_4)
 ```
