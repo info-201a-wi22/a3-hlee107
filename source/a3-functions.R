@@ -46,7 +46,7 @@ ms_black_pop <- black_pop_state %>%
 
 # Join WA and MS df
 ms_wa_black_pop <- wa_black_pop %>%
-  left_join(ms_black_pop, by = c('year'))
+  left_join(ms_black_pop, by = c("year"))
 
 # Function for map -------------------------------------------------------------
 
@@ -81,5 +81,3 @@ blank_theme <- theme_bw() +
     panel.grid.minor = element_blank(), # remove minor grid lines
     panel.border = element_blank()      # remove border around plot
   )
-
-

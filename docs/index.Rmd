@@ -20,6 +20,15 @@ source("~/Documents/INFO_201/a3-hlee107/source/a3-functions.R")
 # Report {.tabset .tabset-fade .tabset-pills}
 
 ### Introduction
+Incarceration is a multifaceted issue. From this dataset, I hope to extrapolate information from the story behind the numbers. My focus is on Washington state.
+I will evaluate the trends in the incarceration population in the BIPOC 
+community for the current top 5 populous counties in Washington. Since
+Washington is labeled as a liberal state, I wanted to compare it to the most
+conservative state in the country, Mississippi. I first evaluated the jail
+population of Black people in Mississippi and Washington. Then, I wanted to see
+a further comparison with the incarceration population of Black and White people
+in Washington and Mississippi. These charts and maps will help us summarise the
+relationship between an inmate's race and location.
 
 <br>
 
