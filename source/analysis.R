@@ -3,7 +3,10 @@
 # Use your data analysis and visualization skills to expose patterns of 
 # inequality using incarceration data collected by the Vera Institute.
 
-# Function for Chart that Shows Trends Over Time
+# Function for Chart that Shows Trends Over Time -------------------------------
+# Start at year 1984 because there is no data before that year for the top 5
+# populous counties in WA.
+# Sum each row to get the total of BIPOC community
 population_data <- function(data) {
   race_county_data <- data %>%
   filter(year >= 1984) %>%
@@ -13,8 +16,8 @@ population_data <- function(data) {
   summarise(year, county_name, bipoc_jail_pop)
 }
 
-# Line plot for Chart that Shows Trends Over Time
-bipoc_pop_scatter <- function(data) {
+# Line plot for Chart that Shows Trends Over Time ------------------------------
+bipoc_pop_line <- function(data) {
   ggplot(data = data, aes(x = year, y = bipoc_jail_pop)) +
     
     scale_x_continuous(breaks = seq(1984, 2018, by = 2)) +
@@ -22,8 +25,10 @@ bipoc_pop_scatter <- function(data) {
     
     geom_line(aes(color = county_name), size = 1) +
 
-    labs(title = "The Relationship Between County and People of Color Jail
-                  Population",
+    labs(title = "The Relationship Between County and BIPOC* Jail Population",
+         caption = "* For this chart, indigenous people were categorized under
+         native population in the incareration csv file, and people of color
+         were categorized as AAPI, Latinx, and other race in the csv file.",
          x = "Year",
          y = "Population",
          color = "Top 5 Populous County \n (not in order)") +
@@ -31,3 +36,28 @@ bipoc_pop_scatter <- function(data) {
     theme(axis.text.x = element_text(angle = 90),
           panel.grid.minor = element_blank())
 }
+
+# Function for Chart that Compares Two Variables -------------------------------
+# Compare WA state and the most conservation state in the country, Mississippi
+# for their jail population of black people over the years. Start at year 1984 
+# because there is no data before that year.
+# (https://worldpopulationreview.com/state-rankings/most-conservative-states)
+state_black_scatter <- function(data_2) {
+  ggplot(data_2) +
+    
+    scale_x_continuous(breaks = seq(1984, 2018, by = 2)) +
+    scale_y_continuous(breaks = seq(0, 8500, by = 500)) +
+    
+    geom_point(aes(x = year, y = wa_black_jail_pop), color = "blue") +
+    geom_point(aes(x = year, y = ms_black_jail_pop), color = "red") +
+    
+    labs(title = "Comparison between Washington and Mississippi Black Jail Population",
+         x = "Year",
+         y = "Population") +
+         #color = "State") +
+    
+    theme(axis.text.x = element_text(angle = 90)) +
+    
+    scale_color_discrete(name = "State")
+}
+

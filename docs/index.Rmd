@@ -29,7 +29,7 @@ source("~/Documents/INFO_201/a3-hlee107/source/a3-functions.R")
 
 ## Chart that Shows Trends Over Time
 
-### <u>Speed and Education</u>
+### <u>County and BIPOC Jail Population</u>
 
 <br>
 
@@ -40,10 +40,10 @@ plot(bipoc_pop_scatter(data))
 
 ## Chart that Compares Two Variables
 
-### <u>Speed and Education</u>
+### <u>State and Black Jail Population</u>
 
 <br>
 
 ```{r, compare, echo = FALSE, fig.show="hold", out.width="50%"}
-
+plot(state_black_scatter(ms_wa_black_pop))
 ```
