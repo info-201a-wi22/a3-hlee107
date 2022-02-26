@@ -3,14 +3,6 @@
 # Use your data analysis and visualization skills to expose patterns of
 # inequality using incarceration data collected by the Vera Institute.
 
-# Summary Information ----------------------------------------------------------
-
-# 
-summary_list <- function(data) {
-  info_list <- list()
-  
-}
-
 # Function for Chart that Shows Trends Over Time -------------------------------
 # Start at year 1984 because there is no data before that year for the top 5
 # populous counties in WA.

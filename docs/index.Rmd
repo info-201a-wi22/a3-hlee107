@@ -33,8 +33,31 @@ relationship between an inmate's race and location.
 <br>
 
 ### Summary of Information
+The change in population in Mississippi from 1998 to 2018 was a decrease of
+804.53 Black people in jail population.
+
+The change in population in Washington from 1998 to 2018 was an increase of
+261.25 Black people in jail population.
+
+The current highest ratio of jail population in Black people in Washington state
+to Mississippi is 0.267.
+
+The current highest ratio of jail population in White people in Washington state
+to Mississippi is 1.656.
+
+In 2018, the Washington state county with the highest population of Black people
+in jail was King County.
+
+In 2018, the Mississippi county with the highest population of Black people in
+jail was Hinds County.
 
 <br>
+
+### References:
+Most Conservative States 2022. World Population Review. (n.d.). Retrieved February 24, 2022, from https://worldpopulationreview.com/state-rankings/most-conservative-states 
+
+Population of Counties in Washington (2022). World Population Review. (n.d.). Retrieved February 24, 2022, from https://worldpopulationreview.com/us-counties/states/wa 
+<!-------------------------------------------------------------------------------------------------->
 
 ## Chart that Shows Trends Over Time
 
@@ -50,7 +73,9 @@ plot(bipoc_pop_line(data))
 <br>
 <div style="background-color:#F2EEED;padding:5px;">
 <p style="text-indent:40px;font-size:17px;">
-Both graphs show a slightly negatively sloped linear regression line, which would indicate that the higher the population proportion with at least two access points (relative to one), the less students meet test standards. This can loosely imply that more Internet access points does not result in better education. However, correlation does not imply causation, and so further tests would be required. Moreover, if you remove some points, the graph appears it could have a positively sloped regression line.
+The top 5 populous county in Washington was chosen becuase it provided the great amount of information in the terms of diversity. Due to population of the counties, it allowed a level of depth that would not be seen in a smaller county. Not surprisingly, King county had higher level of BIPIOC incarceration. It is the largest county in Washington and is a central hub for activism and social events. Due to the density, we're seeing higher levels of incareration. Overall, we see a great snapshot into the dynamic of Washington state.
+
+The top 5 counties was determined through the census and was compiled by World Population Review. The citation is listed in the references section.
 </p></div>
 <!-------------------------------------------------------------------------------------------------->
 
@@ -65,6 +90,14 @@ data_2 <- ms_wa_black_pop
 plot(state_black_scatter(data_2))
 ```
 
+<br>
+<div style="background-color:#F2EEED;padding:5px;">
+<p style="text-indent:40px;font-size:17px;">
+Washington state is considered a liberal, and I believed comparing it to the most conservative state in the country would provide a telling insight into the dynamic of our country. There are many factors that are not listed in this dataset so we just see the incarceration number. This chart is a gateway to opportunities to study why this dramatic difference exists. There can be social, economic, or governmental factors that made this happen. We can see from 1988 on, that Mississippi had significantly higher incarceration population of Black people than Washington state.
+
+The most conservative state was determined through a Gallup poll and was compiled by World Population Review. The citation is listed in the references section.
+</p></div>
+<!-------------------------------------------------------------------------------------------------->
 
 ## Map of Washington State and Mississippi
 
@@ -80,3 +113,10 @@ wa_white_map(data_3)
 ms_black_map(data_4)
 ms_white_map(data_4)
 ```
+
+<br>
+<div style="background-color:#F2EEED;padding:5px;">
+<p style="text-indent:40px;font-size:17px;">
+Now that we've seen the dramatic upticks in incarceration population of Black people, I explored if there were certain hot spots in each state. It was also broken down between race. In this instance, viewed Black and White people because of Mississippi's population distribution. By seeing the breakdown between state and race, we're able to pin point where the population shift are happening for people. As predicted, King county had the highest incarceration population for both Black and White people. For Mississippi, it was Hinds county.
+</p></div>
+<!-------------------------------------------------------------------------------------------------->
