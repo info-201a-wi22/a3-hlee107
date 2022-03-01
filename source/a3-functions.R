@@ -95,7 +95,7 @@ wa_2018 <- ms_wa_black_pop %>%
   filter(year == 2018) %>%
   select(wa_black_jail_pop)
 
-change_wa_20 <- wa_2018 - wa_2008
+change_wa_20 <- wa_2018 - wa_1998
 
 # # MS change in incarceration of Black people over the past 20 years
 ms_1998 <- ms_wa_black_pop %>%
@@ -106,7 +106,7 @@ ms_2018 <- ms_wa_black_pop %>%
   filter(year == 2018) %>%
   select(ms_black_jail_pop)
 
-change_ms_20 <- ms_2018 - ms_2008
+change_ms_20 <- ms_2018 - ms_1998
 
 # Most recent highest ratio of WA to MS jail population of Black people
 state_highest_ratio_black <- ms_wa_black_pop %>%
