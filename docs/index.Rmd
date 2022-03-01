@@ -33,8 +33,8 @@ relationship between an inmate's race and location.
 <br>
 
 ### Summary of Information
-The change in population in Mississippi from 1998 to 2018 was a decrease of
-804.53 Black people in jail population.
+The change in population in Mississippi from 1998 to 2018 was a increase of
+1749.41 Black people in jail population.
 
 The change in population in Washington from 1998 to 2018 was an increase of
 261.25 Black people in jail population.
